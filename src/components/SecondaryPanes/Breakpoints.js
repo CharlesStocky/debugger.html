@@ -79,11 +79,7 @@ function renderSourceLocation(source, line, column) {
     return null;
   }
 
-  return (
-    <div className="location">
-      {filename + ':' + bpLocation}
-    </div>
-  );
+  return <div className="location">{`${filename}:${bpLocation}`}</div>;
 }
 
 class Breakpoints extends PureComponent<Props> {
