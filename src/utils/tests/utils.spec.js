@@ -1,4 +1,4 @@
-import { handleError, promisify, endTruncateStr, waitForMs } from "../utils";
+import { handleError, promisify, waitForMs } from "../utils";
 
 describe("handleError()", () => {
   const testErrorText = "ERROR: ";
@@ -36,7 +36,6 @@ describe("promisify()", () => {
     expect(testMethod).toBeCalledWith(testArgs, expect.anything());
   });
 });
-
 
 describe("waitForMs()", () => {
   let testPromise;
