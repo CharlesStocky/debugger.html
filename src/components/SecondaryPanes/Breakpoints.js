@@ -79,7 +79,7 @@ function renderSourceLocation(source, line, column) {
     return null;
   }
 
-  return <div className="location">{`${filename}:${bpLocation}`}</div>;
+  return <div title={filename} className="location">{`${bpLocation} : ${filename}`}</div>;
 }
 
 class Breakpoints extends PureComponent<Props> {
@@ -170,7 +170,6 @@ class Breakpoints extends PureComponent<Props> {
           ]
         ).map(bp => this.renderBreakpoint(bp))
       );
-
     return <div className="pane breakpoints-list">{children}</div>;
   }
 }
